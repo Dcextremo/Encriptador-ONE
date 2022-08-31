@@ -1,0 +1,558 @@
+html
+{
+    width: 100%;
+    min-height: 100vh;
+}
+body
+{
+    position: relative;
+    width: 1440px;
+    height: 1024px; 
+    font-family: 'DynaPuff', cursive;
+    /* Light blue/light-blue-100 */
+
+    background: linear-gradient(#9dafec,rgb(147, 236, 147)) ;
+    
+    
+} 
+.video
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+}
+header
+{
+    padding: 20px 0;
+}
+.logo
+{
+        /* Logo */
+
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.ingreso
+{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    /* identical to box height, or 48px */
+
+
+    /* Dark blue/dark-blue-300 */
+
+    color: #0A3871;
+}
+.ingresoTexto
+{
+    background: #00e3d96b;
+    border: transparent;
+    padding-top: 36px;
+    border-radius: 32px;
+    flex: 60%;
+    padding-left: 10%;
+    font-size: 25px;
+    outline: none;
+    resize: none;
+    cursor: text;
+    font-family: 'DynaPuff', cursive;
+    color: rgb(243, 247, 247);
+}
+textarea::placeholder
+{
+    color: white;
+}
+.atencion
+{
+    /* Solo letras minúsculas y sin acentos */
+
+    width: 80%;
+    height: 15%;
+    margin: 30%;
+
+    
+    font-weight: 400;
+    font-size: 50%;
+    line-height: 150%;
+    
+    /* identical to box height, or 18px */
+
+
+    /* Gray/gray-400 */
+
+    color:rgba(182, 182, 182, 0.719);
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+    margin-top: -15%;
+}
+/* .encriptar
+{
+    display: flex;
+    align-items: flex-end;
+    padding: 3%;
+    gap: 8px;
+    width: 43%;
+    height: 115%;
+    background: #0a3871;
+    background: linear-gradient(45deg,rgb(180, 235, 250),rgb(3, 205, 255));
+    border-radius: 45px;
+    flex: 0 0 auto;
+    order: 0;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+    flex-wrap: nowrap;
+    
+} */
+.encriptar
+{
+    position: relative;
+    width: 50%;
+    
+    display: inline-block;
+    padding: 5%;
+    margin: -5%;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 10px;
+    overflow: hidden;
+    margin-right: 50px;
+    background: #31345296;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+    left: 10%;
+}
+/* 
+.encriptar:hover
+{
+    opacity: 30%;
+} */
+.encriptar:hover
+{
+    
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                    0 0 25px #03e9f4,
+                    0 0 50px #03e9f4,
+                    0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    
+}
+.encriptar:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.encriptar:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.encriptar span{
+    position: absolute;
+    display: block;
+}
+.encriptar span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.encriptar span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.encriptar span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+.encriptar span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+.imgEncriptado
+{
+  position: relative;
+  top: 0%;
+  left: 0%;
+}
+/* .desencriptar
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 3%;
+    gap: 8px;
+    width: 43%;
+    height: 115%;
+    background: linear-gradient(90deg,rgb(9, 88, 141),rgb(186, 238, 253));
+    border-radius: 45px;
+    flex: 0 0 auto;
+    order: 0;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+}
+.desencriptar:hover
+{
+    opacity: 30%;
+} */
+.desencriptar{
+    position: relative;
+    width: 50%;
+    display: inline-block;
+    padding: 5%;
+    margin: -5%;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 10px;
+    overflow: hidden;
+    margin-right: 50px;
+    background: #31345296;
+    justify-content: center;
+    font-family: 'DynaPuff', cursive;
+    left: 10%;
+   
+}
+.desencriptar:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.desencriptar:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.desencriptar:nth-child(2){
+    filter: hue-rotate(1deg);
+}
+.desencriptar span{
+    position: absolute;
+    display: block;
+}
+.desencriptar span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.desencriptar span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.desencriptar span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.desencriptar span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+.imgDesecriptando
+{
+    position: relative;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+}
+
+.rectangulo
+{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    left: 70%;
+    top: 10%;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    background: #3f98e782;
+    
+}
+.muñeco
+{
+    position: relative;
+    width: 70%;
+    top: 5%;
+    left: 19%;
+    text-align: center;
+}
+.muñeco:hover
+{
+    opacity: 20%;
+}
+.mensaje
+{
+    position: relative;
+    width: 93%;
+    height: 29%;
+    left: 5%;
+    top: 10%;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 150%;
+    color: #00c39f;
+    margin-top: -5%;
+    background: transparent;
+    border: transparent;
+    cursor: default;
+    font-family: 'DynaPuff', cursive;
+}
+.ningunMensaje
+{
+    position: relative;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f6f7fc;
+}
+.ingresar
+{
+    position: relative;
+    text-align: center;
+    font-size: .9em;
+    top: 3%;
+    color: #f6f7fc;
+}
+.btnCopiar
+{
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    position: relative;
+    width: 20;
+    height: 67px;
+    left: 40%;
+    top: 36%;
+    border: 1px solid rgb(10, 56, 113);
+    border-radius: 24px;
+    justify-content: center;
+    margin-top: -23%;
+    font-family: 'DynaPuff', cursive;
+    background:linear-gradient(45deg,rgb(100, 100, 252),aqua);
+}
+
+.btnCopiar:hover
+{
+    opacity: 30%;
+    transform: scale(1.1);
+}
+footer
+{
+    position: absolute;
+    font-family: 'DynaPuff', cursive;
+    text-align: center;
+    font-weight: bold;
+    bottom: 7%;
+    margin-left: 50%;
+    color: #f6f7fc;
+    
+}
+.iconos
+{
+   font-size: 1000%;
+}
+.logoInstagram
+{
+    filter: invert(100%);
+}
+.logoInstagram:hover
+{
+    opacity: 90%;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: 0.5s;
+    transform:scale(1.5);
+}
+.logoGithub
+{
+    filter: invert(100%);
+}
+.logoGithub:hover
+{
+    opacity: 90%;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: 0.5s;
+    transform:scale(1.5);
+}
+.logoLinkedin
+{
+    filter: invert(100%);
+}
+.logoLinkedin:hover
+{
+    opacity: 90%;
+    cursor: pointer;
+    filter: invert(100%); 
+    transition: 0.5s;
+    transform:scale(1.5);
+}
+@media screen and (max-width: 700px)
+.ingresoTexto{
+    width: 97%;
+    height: 55%;
+   
+}
+@media screen and (max-width: 700px)
+    .botones
+{
+    left: 4%;
+}
+        
+
+@media screen and (max-width: 700px)
+.rectangulo
+{
+    width: 100%;
+    height: 45%;
+    top: 58%;
+    left: 50%;
+}
